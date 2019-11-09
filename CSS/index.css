@@ -16,7 +16,6 @@ footer h5 {
 
 a {
     text-decoration: none;
-    display: inline-block;
     padding: 5px 10px;
     letter-spacing: 1px;
     margin: 0 20px;
@@ -26,27 +25,22 @@ a {
 }
 
 .container {
-    display: table;
-    height: 100%;
-    float: right;
-}
-
-.row {
-    display: table-row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .container iframe {
-    display: table-cell;
-    float: right;
-    padding-right: 40px;
-    padding-bottom: 300px;
-    width: 60%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 80%;
+    height: 500px;
+    margin: auto;
 }
 
 .container nav {
-    display: table-cell;
-    float: right;
-    padding-right: 40px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: auto;
     padding-bottom: 20px;
 }
 
@@ -57,25 +51,30 @@ li {
 nav ul {
     list-style: none;
     position: relative;
+    min-width: 200px;
 }
 
 nav ul li {
     padding: 10px;
-    margin: 5px;
     display:inline-block;
     position: relative;
-    float: right;
 
 }
 
-nav li:hover {
+nav li {
     background-color: snow;
+}
+
+nav li:hover {
+    background-color: azure;
 }
 
 nav ul ul {
     display: none;
     position: absolute;
     top:100%;
+    right: 0;
+    min-width: 220px;
 }
 
 nav ul li:hover > ul {
@@ -86,4 +85,11 @@ nav ul ul li {
     float:none;
     display:list-item;
     position: relative;
+
+}
+
+nav ul ul ul {
+    position: absolute;
+    top: 50%;
+    left: 100%;
 }
