@@ -1,17 +1,25 @@
 body {
-    display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
     background: url("/images/back.png") no-repeat center center fixed;
     background-size: cover;
     height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     padding-left: 50px;
 }
 
-footer h5 {
-    float: right;
+footer {
+    height: 20px;
+}
+
+footer > h5 {
+    text-align: right;
+    margin-right: 20px;
 }
 
 a {
@@ -25,71 +33,74 @@ a {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    height: 100%;
 }
 
-.container iframe {
+.container > iframe {
     grid-column-start: 1;
     grid-column-end: 3;
-    width: 80%;
-    height: 500px;
-    margin: auto;
+    width: 90%;
+    height: 600px;
+    margin: 20px;
 }
 
-.container nav {
+.container > nav {
+    margin-top: 10px;
     grid-column-start: 1;
     grid-column-end: 3;
-    margin: auto;
     padding-bottom: 20px;
 }
 
 li {
-    box-shadow: 0 0 10px 5px rgb(35, 52, 52);
+
 }
 
-nav ul {
+div ul {
+    background-color: snow;
+    box-shadow: 1px 1px 1px 1px rgb(35, 52, 52);
     list-style: none;
     position: relative;
     min-width: 200px;
 }
 
-nav ul li {
+div ul li {
     padding: 10px;
     display:inline-block;
     position: relative;
 
 }
 
-nav li {
+div li {
     background-color: snow;
 }
 
-nav li:hover {
+div li:hover {
     background-color: azure;
 }
 
-nav ul ul {
+div ul ul {
     display: none;
     position: absolute;
+    margin: 2px;
     top:100%;
-    right: 0;
+    left: 0;
     min-width: 220px;
 }
 
-nav ul li:hover > ul {
+div ul li:hover > ul {
     display:inherit;
 }
 
-nav ul ul li {
+div ul ul li {
     float:none;
     display:list-item;
     position: relative;
 
 }
 
-nav ul ul ul {
+div ul ul ul {
     position: absolute;
-    top: 50%;
+    margin: 2px;
+    top: 0;
     left: 100%;
 }

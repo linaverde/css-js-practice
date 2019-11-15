@@ -1,3 +1,5 @@
+bubblesort();
+
 function bubblesort() {
     let num = [1, 192, 16, 7, 538, 300, 42, 66, 15, 14];
     console.log(num);

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        div > div {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: blue;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function onLoad() {
+            let block = document.querySelectorAll("div > div");
+            block.forEach(function (item, i, block) {
+                item.style.backgroundColor = "blue";
+            });
+        }
+
+        function elemClick(j) {
+            console.log(j);
+            let block = document.querySelectorAll("div > div");
+            block.forEach(function (item, i, block) {
+                if (item.style.backgroundColor === "blue" && i >= j) {
+                    item.style.backgroundColor = "red";
+                } else if (item.style.backgroundColor === "red" && i >= j) {
+                    item.style.backgroundColor = "blue";
+                }
+            });
+        }
+
+        function makeup() {
+            let block = document.querySelectorAll("div > div");
+            block.forEach(function (item, i, block) {
+                item.style.backgroundColor = "blue";
+            });
+        }
+
+        function mix() {
+            let block = document.querySelectorAll("div > div");
+            block.forEach(function (item, i, block) {
+                let color = Math.floor(Math.random() * (2)) + 1;
+                if (color === 1) {
+                    item.style.backgroundColor = "blue";
+                } else {
+                    item.style.backgroundColor = "red";
+                }
+            });
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Головоломка</title>
+</head>
+
+
+<body>
+<div id="container">
+    <div onclick="elemClick(0)"></div>
+    <div onclick="elemClick(1)"></div>
+    <div onclick="elemClick(2)"></div>
+    <div onclick="elemClick(3)"></div>
+    <div onclick="elemClick(4)"></div>
+    <div onclick="elemClick(5)"></div>
+    <div onclick="elemClick(6)"></div>
+</div>
+<input type="button" onclick="mix()" value="Запутать"/> <input type="button" onclick="makeup()" value="Решить"/>
+<script> onLoad();</script>
+</body>
+</html>
