@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table{
+            margin: auto;
+        }
+        td{
+            width: 120px;
+            height: 120px;
+        }
+        div {
+            text-align: center;
+            font-size: 20px;
+            margin: auto;
+        }
+        #counter{
+            text-align: center;
+            font-size: 30px;
+            color: red;
+        }
+        .hole {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: url("/images/grass.jpg");
+            border: 3px solid green;
+        }
+        .mole {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: url("/images/mole.png");
+            background-size: cover;
+            visibility: hidden;
+        }
+    </style>
+    <title>Бесконечное бессмысленное насилие</title>
+</head>
+<body>
+<div class="text">Набери 10 очков, чтобы получить скрытую концовку!</div>
+<table>
+    <tr>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+    </tr>
+    <tr>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+    </tr>
+    <tr>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+    </tr>
+    <tr>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+        <td><div class="hole"><div class="mole"></div></div></td>
+    </tr>
+</table>
+<div class="text">Вы безжалостно побили кротов:</div>
+<div id="counter">0</div>
+<script src="/JS/molegame.js"></script>
+</body>
+</html>
